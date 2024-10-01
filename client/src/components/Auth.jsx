@@ -32,7 +32,7 @@ const Auth = () => {
 
         const { data: { token, userId, hashedPassword, fullName } } = await axios.post(`${URL}/${isSignup ? 'signup' : 'login'}`, {
             username, password, fullName: form.fullName, phoneNumber,
-        });
+        });//
 
         cookies.set('token', token);
         cookies.set('username', username);
