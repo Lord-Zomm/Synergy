@@ -11,7 +11,6 @@ const initialState = {
     username: '',
     password: '',
     confirmPassword: '',
-    phoneNumber: '',
 }
 
 const Auth = () => {
@@ -25,13 +24,13 @@ const Auth = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
 
-        const { username, password, phoneNumber } = form;
+        const { username, password } = form;
 
         //const URL = 'http://localhost:5000/auth';
         const URL = 'https://synergy-45ua.onrender.com/auth/login';
 
         const { data: { token, userId, hashedPassword, fullName } } = await axios.post(`${URL}/${isSignup ? 'signup' : 'login'}`, {
-            username, password, fullName: form.fullName, phoneNumber,
+            username, password, fullName: form.fullName,
         });
 
         cookies.set('token', token);
@@ -40,7 +39,6 @@ const Auth = () => {
         cookies.set('userId', userId);
 
         if(isSignup) {
-            cookies.set('phoneNumber', phoneNumber);
             cookies.set('hashedPassword', hashedPassword);
         }
 
@@ -79,18 +77,6 @@ const Auth = () => {
                                     required
                                 />
                             </div>
-                        {isSignup && (
-                            <div className="auth__form-container_fields-content_input">
-                                <label htmlFor="phoneNumber">Phone Number</label>
-                                <input
-                                    name="phoneNumber"
-                                    type="text"
-                                    placeholder="Phone Number"
-                                    onChange={handleChange}
-                                    required
-                                />
-                            </div>
-                        )}
                         <div className="auth__form-container_fields-content_input">
                                 <label htmlFor="password">Password</label>
                                 <input
