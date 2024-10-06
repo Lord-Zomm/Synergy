@@ -27,10 +27,9 @@ const Auth = () => {
         const { username, password } = form;
 
         // Dynamically select protocol (http or https)
-        const protocol = window.location.protocol === 'https:' ? 'https' : 'http';
-        const baseURL = protocol === 'https'
-            ? 'https://ec2-3-144-146-156.us-east-2.compute.amazonaws.com:5000/auth'
-            : 'http://ec2-3-144-146-156.us-east-2.compute.amazonaws.com:5000/auth';
+        const protocol = window.location.protocol === 'https:' ? 'http' : 'http';
+        const baseURL = `${protocol}://ec2-3-144-146-156.us-east-2.compute.amazonaws.com:5000/auth`;
+
 
         const { data: { token, userId, hashedPassword, fullName } } = await axios.post(`${baseURL}/${isSignup ? 'signup' : 'login'}`, {
             username, password, fullName: form.fullName,
