@@ -28,7 +28,7 @@ const Auth = () => {
 
         //const URL = 'http://localhost:5000/auth';
         //const URL = 'https://synergy-45ua.onrender.com/auth';
-        const URL = 'http://ec2-3-144-146-156.us-east-2.compute.amazonaws.com:5000/auth';
+        const URL = 'http://ec2-3-144-146-156.us-east-2.compute.amazonaws.com:5000';
 
         const { data: { token, userId, hashedPassword, fullName } } = await axios.post(`${URL}/${isSignup ? 'signup' : 'login'}`, {
             username, password, fullName: form.fullName,
