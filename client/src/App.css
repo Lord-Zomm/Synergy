@@ -1845,17 +1845,3 @@
     }
   }
 
-  .channel-list__container-responsive {
-    position: fixed;
-    left: -89%; /* Hide off-screen */
-    transition: left 0.3s ease; /* Smooth transition */
-    background-color: #005fff; /* Background color */
-    width: 250px; /* Adjust based on your design */
-    height: 100%; /* Full height */
-    z-index: 1000; /* Ensure it's on top */
-  }
-
-  .channel-list__container-responsive.active {
-    left: 0; /* Show when active */
-  }
-
