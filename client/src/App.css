@@ -162,40 +162,6 @@
     font-weight: 700;
   }
 
-  @media screen and (max-width: 800px) {
-    .auth__form-container {
-      flex-direction: column-reverse;
-    }
-
-    .auth__form-container_fields {
-      justify-content: flex-start;
-    }
-
-    .auth__form-container_image {
-      height: 100px;
-      flex: none;
-      box-shadow: none;
-    }
-
-    .auth__form-container_image img {
-      object-fit: cover;
-    }
-  }
-
-  @media screen and (max-width: 375px) {
-    .auth__form-container_fields {
-      padding: 2rem 0.5rem;
-    }
-
-    .auth__form-container_fields-content_input input {
-      width: 95%;
-    }
-
-    .auth__form-container_fields-content_input-password {
-      right: 3%;
-    }
-  }
-
   .app__wrapper {
     display: flex;
     flex: 1;
@@ -236,19 +202,6 @@
   .str-chat__message-notification {
     background: var(--primary-color);
     cursor: pointer;
-  }
-
-  @media screen and (max-width: 960px) {
-    .str-chat-channel-list.team {
-      position: unset;
-      left: unset;
-      top: unset;
-      z-index: unset;
-      min-height: unset;
-      overflow-y: unset;
-      box-shadow: unset;
-      transition: unset;
-    }
   }
 
   .channel-empty__container {
@@ -898,12 +851,6 @@
     white-space: nowrap;
     -ms-overflow-style: none;
     scrollbar-width: none;
-  }
-
-  @media screen and (min-width: 1070px) {
-    .team-channel-header__name-wrapper {
-      max-width: 700px;
-    }
   }
 
   .team-channel-header__name-wrapper::-webkit-scrollbar {
@@ -1841,7 +1788,59 @@
 
   @media screen and (max-width: 320px) {
     .channel-list__sidebar {
-
+      display: none;
     }
   }
 
+  @media screen and (max-width: 800px) {
+    .auth__form-container {
+      flex-direction: column-reverse;
+    }
+
+    .auth__form-container_fields {
+      justify-content: flex-start;
+    }
+
+    .auth__form-container_image {
+      height: 100px;
+      flex: none;
+      box-shadow: none;
+    }
+
+    .auth__form-container_image img {
+      object-fit: cover;
+    }
+  }
+
+  @media screen and (max-width: 375px) {
+    .auth__form-container_fields {
+      padding: 2rem 0.5rem;
+    }
+
+    .auth__form-container_fields-content_input input {
+      width: 95%;
+    }
+
+    .auth__form-container_fields-content_input-password {
+      right: 3%;
+    }
+  }
+
+  @media screen and (max-width: 960px) {
+    .str-chat-channel-list.team {
+      position: unset;
+      left: unset;
+      top: unset;
+      z-index: unset;
+      min-height: unset;
+      overflow-y: unset;
+      box-shadow: unset;
+      transition: unset;
+    }
+  }
+
+  @media screen and (min-width: 1070px) {
+    .team-channel-header__name-wrapper {
+      max-width: 700px;
+    }
+  }
