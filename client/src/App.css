@@ -1703,106 +1703,143 @@
     padding: 10px;
   }
 
-  /* Base Styles */
-.channel-list__sidebar {
-  display: flex;
-  flex-direction: column;
-  transition: all 0.3s ease; /* Smooth transition for toggling */
-}
+  @media screen and (max-width: 960px) {
 
-/* Media queries for responsiveness */
-@media screen and (max-width: 800px) {
-  .auth__form-container {
-    flex-direction: column-reverse;
+    .team-channerl-header_menu-icon {
+      display: flex;
+    }
+
+    .team-channel-header__container {
+      height: 70px;
+    }
+
+    .team-channel-header__name-wrapper {
+      height: 100%;
+      max-width: unset;
+    }
+
+    .team-channel-header__name-multi {
+      margin-right: 8px;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    .team-channel-header__name.user {
+      font-size: 10px;
+      margin: 5px;
+      text-align: center;
+    }
+
+    .team-channel-header__right {
+      display: flex;
+      padding-left: 10px;
+    }
+
+    .channel-list__container-responsive {
+      display: flex;
+    }
+
+    .channel-list__list__wrapper {
+      width: 100%;
+    }
+
+    .channerl-list__container-toggle {
+      display: flex;
+    }
+
+    .channel-search__input__wrapper {
+      width: 90%;
+      padding-left: 10px;
+      justify-content: flex-start;
+    }
+
+    .channel-search__input__text {
+      width: inherit;
+    }
+
+    .channel-preview__item.multi {
+      width: 80%;
+    }
+
+    .channel-search__results {
+      top: 100%;
+      left: 5%;
+    }
   }
 
-  .auth__form-container_fields {
-    justify-content: flex-start;
+  @media screen and (max-width: 650px) {
+    .channerl-list__container-toggle {
+      right: -3%;
+    }
   }
 
-  .auth__form-container_image {
-    height: 100px;
-    flex: none;
-    box-shadow: none;
+  @media screen and (max-width: 400px) {
+    .channel-preview__item.multi {
+      width: 150px;
+    }
+
+    .channerl-list__container-toggle {
+      right: -5%;
+    }
   }
 
-  .auth__form-container_image img {
-    object-fit: cover;
-  }
-}
-
-@media screen and (max-width: 960px) {
-  .channel-list__container {
-    display: flex; /* Show the sidebar */
-    flex-direction: column; /* Stack items vertically */
-    width: 100%; /* Take full width */
-    padding: 1rem; /* Add padding */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+  @media screen and (max-width: 320px) {
+    .channel-list__sidebar {
+      display: none;
+    }
   }
 
-  .channel-list__sidebar {
-    display: flex; /* Keep the sidebar visible */
-    flex-direction: column; /* Stack items in the sidebar */
-    width: 100%; /* Full width */
-    background-color: white; /* Optional: Set background color */
-    z-index: 10; /* Make sure it stays above other elements */
+  @media screen and (max-width: 800px) {
+    .auth__form-container {
+      flex-direction: column-reverse;
+    }
+
+    .auth__form-container_fields {
+      justify-content: flex-start;
+    }
+
+    .auth__form-container_image {
+      height: 100px;
+      flex: none;
+      box-shadow: none;
+    }
+
+    .auth__form-container_image img {
+      object-fit: cover;
+    }
   }
 
-  .team-channel-header__container {
-    height: auto; /* Allow the header to adjust */
-    padding: 0.5rem; /* Add some padding */
+  @media screen and (max-width: 375px) {
+    .auth__form-container_fields {
+      padding: 2rem 0.5rem;
+    }
+
+    .auth__form-container_fields-content_input input {
+      width: 95%;
+    }
+
+    .auth__form-container_fields-content_input-password {
+      right: 3%;
+    }
   }
 
-  .team-channel-header__right {
-    display: flex;
-    padding-left: 10px;
+  @media screen and (max-width: 960px) {
+    .str-chat-channel-list.team {
+      position: unset;
+      left: unset;
+      top: unset;
+      z-index: unset;
+      min-height: unset;
+      overflow-y: unset;
+      box-shadow: unset;
+      transition: unset;
+    }
   }
 
-  .channel-search__input__wrapper {
-    width: 100%; /* Full width for the search input */
-    padding-left: 10px;
-    justify-content: flex-start;
+  @media screen and (min-width: 1070px) {
+    .team-channel-header__name-wrapper {
+      max-width: 700px;
+    }
   }
 
-  .channel-preview__item.multi {
-    width: 100%; /* Make it responsive */
-  }
 
-  .channel-list__container-responsive {
-    display: flex; /* Display the responsive container */
-  }
-}
-
-@media screen and (max-width: 650px) {
-  .channel-list__sidebar {
-    display: flex; /* Keep it visible */
-    flex-direction: column; /* Stack items */
-    width: 100%; /* Full width */
-  }
-
-  .channerl-list__container-toggle {
-    right: -3%; /* Adjust toggle button position */
-  }
-}
-
-@media screen and (max-width: 400px) {
-  .channel-preview__item.multi {
-    width: 100%; /* Full width for smaller screens */
-  }
-
-  .channerl-list__container-toggle {
-    right: -5%; /* Adjust toggle button position */
-  }
-}
-
-@media screen and (max-width: 320px) {
-  .channel-list__sidebar {
-    display: block; /* Ensure the sidebar is block on very small screens */
-    position: absolute; /* Position absolute for better control */
-    top: 0; /* Align to the top */
-    left: 0; /* Align to the left */
-    width: 100%; /* Full width */
-    height: auto; /* Adjust height as needed */
-    overflow-y: auto; /* Scroll if necessary */
-  }
-}
