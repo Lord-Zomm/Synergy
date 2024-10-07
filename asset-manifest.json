@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/Synergy/static/css/main.febf1567.chunk.css",
-    "main.js": "/Synergy/static/js/main.d9af8ced.chunk.js",
-    "main.js.map": "/Synergy/static/js/main.d9af8ced.chunk.js.map",
+    "main.js": "/Synergy/static/js/main.f10498c2.chunk.js",
+    "main.js.map": "/Synergy/static/js/main.f10498c2.chunk.js.map",
     "runtime-main.js": "/Synergy/static/js/runtime-main.232cdfa4.js",
     "runtime-main.js.map": "/Synergy/static/js/runtime-main.232cdfa4.js.map",
     "static/css/2.ce736fb0.chunk.css": "/Synergy/static/css/2.ce736fb0.chunk.css",
@@ -30,6 +30,6 @@
     "static/css/2.ce736fb0.chunk.css",
     "static/js/2.1c60d048.chunk.js",
     "static/css/main.febf1567.chunk.css",
-    "static/js/main.d9af8ced.chunk.js"
+    "static/js/main.f10498c2.chunk.js"
   ]
 }
