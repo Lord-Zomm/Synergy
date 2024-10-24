@@ -13,7 +13,7 @@ app.use(express.json());
 app.use(express.urlencoded());
 
 app.get('/', (req, res) => {
-    res.send('<a href="https://synergysphere.vercel.app/"></a>');
+    res.send('<a href="https://synergysphere.vercel.app/">https://synergysphere.vercel.app</a>');
 });
 
 app.use('/auth', authRoutes);
